@@ -1,67 +1,56 @@
-import java.util.Scanner;
+# School Library Management System
 
-public class Main {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.util.in);
-        boolean running = true;
+A streamlined digital solution designed to manage school library operations efficiently. This system simplifies book tracking, borrowing histories, user registrations, and inventory management for school administrators and students alike.
 
-        while (running) {
-            // Clear screen effect
-            System.out.print("\033[H\033[2J");  
-            System.flush();
+---
 
-            // 🌟 BEAUTIFUL HOME PAGE INTERFACE
-            System.out.println("====================================================");
-            System.out.println("    📚  SCHOOL LIBRARY MANAGEMENT SYSTEM  📚        ");
-            System.out.println("====================================================");
-            System.out.println("    Welcome back! Please select an option:          ");
-            System.out.println("----------------------------------------------------");
-            System.out.println("  [1] 📖 Book Management (Add, View, Search)       ");
-            System.out.println("  [2] 👥 Student Directory (Register, View Profiles)");
-            System.out.println("  [3] 🔄 Loan Logistics (Borrow/Return Books)       ");
-            System.out.println("  [4] ⚙️ System Settings                           ");
-            System.out.println("  [5] ❌ Exit Application                          ");
-            System.out.println("----------------------------------------------------");
-            System.out.print("✍️ Enter your choice (1-5): ");
+## 🚀 Features
 
-            int choice = scanner.nextInt();
+* **Book Inventory Management:** Easily add, update, and remove books from the system database.
+* **User Management:** Separate profiles and permissions for administrators, teachers, and students.
+* **Borrowing & Returns Tracking:** Automated tracking of issued books, due dates, and return statuses.
+* **Search & Filter:** Quick search functionality to find books by title, author, genre, or ISBN.
+* **Fine Calculation (Optional):** Built-in logic to track overdue books and calculate late fees.
 
-            switch (choice) {
-                case 1:
-                    System.out.println("\n📂 Opening Book Management...");
-                    // Call your book management method here
-                    waitForKey(scanner);
-                    break;
-                case 2:
-                    System.out.println("\n📂 Opening Student Directory...");
-                    // Call your student management method here
-                    waitForKey(scanner);
-                    break;
-                case 3:
-                    System.out.println("\n📂 Opening Loan Logistics...");
-                    // Call your loan management method here
-                    waitForKey(scanner);
-                    break;
-                case 4:
-                    System.out.println("\n📂 Opening System Settings...");
-                    waitForKey(scanner);
-                    break;
-                case 5:
-                    System.out.println("\n👋 Thank you for using School Library System. Goodbye!");
-                    running = false;
-                    break;
-                default:
-                    System.out.println("\n⚠️ Invalid choice! Please enter a number between 1 and 5.");
-                    waitForKey(scanner);
-            }
-        }
-        scanner.close();
-    }
+---
 
-    // Helper method to pause before returning to home page
-    private static void key(Scanner scanner) {
-        System.out.print("\nPress Enter to return to the Main Menu...");
-        scanner.nextLine(); // catch leftover newline
-        scanner.nextLine(); // wait for actual enter press
-    }
-}
+## 🛠️ Tech Stack
+
+* **Frontend:** [Add your frontend tech, e.g., HTML, CSS, JavaScript, React]
+* **Backend:** [Add your backend tech, e.g., Node.js, Python, Java]
+* **Database:** [Add your database, e.g., MySQL, MongoDB, PostgreSQL]
+
+---
+
+## 💻 Getting Started
+
+Follow these steps to set up the project locally on your machine.
+
+### Prerequisites
+Make sure you have the following installed:
+* [e.g., Node.js v18+ / Python 3.10+]
+* Git
+
+### Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/Dilshan2002053/school_library.git](https://github.com/Dilshan2002053/school_library.git)
+   cd school_library
+Install dependencies:
+
+Bash
+# Update this command based on your tech stack (e.g., npm install, pip install -r requirements.txt)
+npm install
+Configure Environment Variables:
+Create a .env file in the root directory and add your configurations:
+
+Code snippet
+PORT=3000
+DATABASE_URL=your_database_url
+Run the application:
+
+Bash
+# Update based on your project script
+npm start
+   
