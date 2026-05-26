@@ -22,35 +22,6 @@ A streamlined digital solution designed to manage school library operations effi
 
 ---
 
-## 💻 Getting Started
 
-Follow these steps to set up the project locally on your machine.
 
-### Prerequisites
-Make sure you have the following installed:
-* [e.g., Node.js v18+ / Python 3.10+]
-* Git
 
-### Installation
-
-1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/Dilshan2002053/school_library.git](https://github.com/Dilshan2002053/school_library.git)
-   cd school_library
-Install dependencies:
-
-Bash
-# Update this command based on your tech stack (e.g., npm install, pip install -r requirements.txt)
-npm install
-Configure Environment Variables:
-Create a .env file in the root directory and add your configurations:
-
-Code snippet
-PORT=3000
-DATABASE_URL=your_database_url
-Run the application:
-
-Bash
-# Update based on your project script
-npm start
-   
