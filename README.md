@@ -1,37 +1,67 @@
-# School Library System
+import java.util.Scanner;
 
-A simple Java application designed to manage school library operations, such as tracking books, students, and borrowing records.
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.util.in);
+        boolean running = true;
 
----
+        while (running) {
+            // Clear screen effect
+            System.out.print("\033[H\033[2J");  
+            System.flush();
 
-## 📖 About the Project
+            // 🌟 BEAUTIFUL HOME PAGE INTERFACE
+            System.out.println("====================================================");
+            System.out.println("    📚  SCHOOL LIBRARY MANAGEMENT SYSTEM  📚        ");
+            System.out.println("====================================================");
+            System.out.println("    Welcome back! Please select an option:          ");
+            System.out.println("----------------------------------------------------");
+            System.out.println("  [1] 📖 Book Management (Add, View, Search)       ");
+            System.out.println("  [2] 👥 Student Directory (Register, View Profiles)");
+            System.out.println("  [3] 🔄 Loan Logistics (Borrow/Return Books)       ");
+            System.out.println("  [4] ⚙️ System Settings                           ");
+            System.out.println("  [5] ❌ Exit Application                          ");
+            System.out.println("----------------------------------------------------");
+            System.out.print("✍️ Enter your choice (1-5): ");
 
-This project is a foundational library management system. It is built to demonstrate core programming concepts like object-oriented programming (OOP), data handling, and basic user interactions.
+            int choice = scanner.nextInt();
 
-### Key Features
-* **Book Management:** Add, view, and search for available books.
-* **Student Records:** Keep track of registered students.
-* **Borrowing System:** Record when a book is borrowed or returned.
+            switch (choice) {
+                case 1:
+                    System.out.println("\n📂 Opening Book Management...");
+                    // Call your book management method here
+                    waitForKey(scanner);
+                    break;
+                case 2:
+                    System.out.println("\n📂 Opening Student Directory...");
+                    // Call your student management method here
+                    waitForKey(scanner);
+                    break;
+                case 3:
+                    System.out.println("\n📂 Opening Loan Logistics...");
+                    // Call your loan management method here
+                    waitForKey(scanner);
+                    break;
+                case 4:
+                    System.out.println("\n📂 Opening System Settings...");
+                    waitForKey(scanner);
+                    break;
+                case 5:
+                    System.out.println("\n👋 Thank you for using School Library System. Goodbye!");
+                    running = false;
+                    break;
+                default:
+                    System.out.println("\n⚠️ Invalid choice! Please enter a number between 1 and 5.");
+                    waitForKey(scanner);
+            }
+        }
+        scanner.close();
+    }
 
----
-
-## 💻 Getting Started
-
-### Prerequisites
-To run this project, you need to have the following installed:
-* [Java Development Kit (JDK)](https://www.oracle.com/java/technologies/downloads/) (Version 11 or higher)
-* An IDE like IntelliJ IDEA, Eclipse, or VS Code
-
-### How to Run
-1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/Dilshan2002053/school_library.git](https://github.com/Dilshan2002053/school_library.git)
-
-   👥 Authors
-Rohitha Dilshan Dhananyaya - Initial Work - Dilshan2002053
-
-
-### 💡 Next Steps:
-1. Paste this into the **Edit** box on your screen.
-2. Click the **Preview** tab next to it to see how it looks.
-3. Click the green **Commit changes...** button in the top right corner when you are ready to save it!
+    // Helper method to pause before returning to home page
+    private static void key(Scanner scanner) {
+        System.out.print("\nPress Enter to return to the Main Menu...");
+        scanner.nextLine(); // catch leftover newline
+        scanner.nextLine(); // wait for actual enter press
+    }
+}
